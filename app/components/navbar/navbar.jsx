@@ -16,7 +16,7 @@ export default function NavBar(){
 
 
     return(
-        <div className="w-full min-h-[20vh] bg-white p-3 sticky top-0 shadow-lg z-30 text-wrap">
+        <div className="max-w-full min-h-[20vh] bg-white p-3 sticky top-0 shadow-lg z-30 text-wrap">
             <div className="w-full flex gap-3 justify-center md:justify-end items-center mb-[20px] text-[14px]">
                 <span className="text-xl text-blue-500 hover:scale-110">
                     <FaPhone className="rotate-90"/>

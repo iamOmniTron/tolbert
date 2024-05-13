@@ -45,7 +45,7 @@ export default function WelcomeSection(){
                         Tolbert Specialists Hospital
                     </span>
                     <span className="mt-2 text-wrap font-normal text-gray-500 text">
-                    Tolber Specialist Hospital is an Ultra-modern Hospital that operates 24 Hours daily. At tolbert, we provide excellent health care services to both in an out patients. Our Hospital has a wide range of services and functional units, These include diagnostic treatment functions such as Clinical Laboratory, Scanning Emergency Rooms, a well equipped operating Theathre and other hospitality functions such as housekeeping, and the fundamental in-patient care or bed related function of a hospital.
+                    Tolbert Specialist Hospital is an Ultra-modern Hospital that operates 24 Hours daily. At tolbert, we provide excellent health care services to both in an out patients. Our Hospital has a wide range of services and functional units, These include diagnostic treatment functions such as Clinical Laboratory, Scanning Emergency Rooms, a well equipped operating Theathre and other hospitality functions such as housekeeping, and the fundamental in-patient care or bed related function of a hospital.
                     </span>
                     <div className="my-2 btn">
                         <button className="py-2 px-4 rounded-md  bg-blue-500 font-bold text-white hover:bg-blue-400 hover:scale-105 transition-all">

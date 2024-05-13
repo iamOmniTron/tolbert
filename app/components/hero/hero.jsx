@@ -15,6 +15,7 @@ export function HeroSection(){
     const getHeroContent = async ()=>{
         try {
             const res = await getHero();
+            console.log(res)
             setHero(res)
         } catch (error) {
             console.log(error);
