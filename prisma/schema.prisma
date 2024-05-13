@@ -1,0 +1,100 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String
+  name String
+}
+
+model Reservation{
+  id Int @id @default(autoincrement())
+  name String
+  phone String
+  email String
+  date DateTime
+  reason String
+  createdAt DateTime @default(now())
+}
+
+model Review{
+  id Int @id @default(autoincrement())
+  rating Int @default(1)
+  review String
+  name String
+  isPublic Boolean @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Compliant{
+  id Int @id @default(autoincrement())
+  service String
+  reception String
+  customerService String
+  pharmacy String
+  nursing String
+  houseKeeping String
+  doctors String
+  referralMode String
+  satisfaction Int
+}
+
+model Blog{
+  id Int @id @default(autoincrement())
+  title String
+  content String
+  imageUrl String
+  author String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service{
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  imageUrl String
+  phone String?
+  createdAt DateTime @default(now())
+  subServices SubService[]
+}
+
+model SubService{
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  imageUrl String
+  phone String?
+  serviceId Int
+  service Service @relation(fields: [serviceId],references: [id])
+}
+
+model Client {
+  id Int @id @default(autoincrement())
+  name String
+  logo String
+}
+
+model Hero{
+  id Int @id @default(autoincrement())
+  title String
+  content String
+  imageUrl String
+  updatedAt DateTime @updatedAt
+}
+
+
+model Video{
+  id Int @id @default(autoincrement())
+  description String
+  videoUrl String
+  updatedAt DateTime @updatedAt
+}
